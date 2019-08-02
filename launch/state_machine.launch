@@ -1,0 +1,4 @@
+#! goby_launch -x
+gobyd 
+state_machine_subscriber
+state_machine_publisher

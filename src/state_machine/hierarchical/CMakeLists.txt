@@ -1,0 +1,2 @@
+add_executable(hierarchical_state_machine
+  hierarchical_machine.cpp)
