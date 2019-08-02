@@ -3,22 +3,23 @@
 int main()
 {
     statechart::Machine machine;
-    std::cout << "-- Initiate "<< std::endl;
+    std::cout << "-- Hit key to Initiate "<< std::endl;
+    std::cin.get();
     machine.initiate();
     
-    sleep(1);
     // turn on
-    std::cout << "-- Posting TurnOn event" << std::endl;
+    std::cout << "-- Hit key to post TurnOn event" << std::endl;
+    std::cin.get();
     machine.process_event(statechart::EvTurnOn());
-    sleep(1);
     // turn on again is ignored 
-    std::cout << "-- Posting TurnOn event" << std::endl;
+    std::cout << "-- Hit key to post TurnOn event" << std::endl;
+    std::cin.get();
     machine.process_event(statechart::EvTurnOn());
-    sleep(1);
     // turn off
-    std::cout << "-- Posting TurnOff event" << std::endl;
+    std::cout << "-- Hit key to post TurnOff event" << std::endl;
+    std::cin.get();
     machine.process_event(statechart::EvTurnOff());
 
-    sleep(1);
-    std::cout << "-- Exit" << std::endl;
+    std::cout << "-- Hit key to Exit" << std::endl;
+    std::cin.get();
 }

@@ -65,11 +65,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${project_LIB_DIR} CACHE PATH
 include_directories(${project_INC_DIR})
 protobuf_include_dirs(${project_INC_DIR})
 
-option(export_goby_interfaces OFF "Build Goby Publish/Subscribe interface files (YML) from code")
-
-if(export_goby_interfaces)
-  include(GobyClangTool)
-endif()
+include(GobyClangTool)
   
 add_subdirectory(src)
 

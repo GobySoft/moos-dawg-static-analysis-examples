@@ -1,0 +1,8 @@
+digraph minimal_machine
+{
+    init [shape=circle, label="", style=filled, fillcolor="black"]
+    OFF, ON [shape=box]
+    init -> OFF [label="initiate"]
+    ON -> OFF [label="EvTurnOff"]
+    OFF -> ON [label="EvTurnOn"]
+}

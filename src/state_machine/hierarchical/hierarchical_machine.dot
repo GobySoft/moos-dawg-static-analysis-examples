@@ -1,0 +1,17 @@
+digraph minimal_machine
+{
+    OFF [shape=box]
+    init [shape=circle, label="", style=filled, fillcolor="black"]
+    
+    subgraph cluster_0
+    {
+        label = "ON"
+        DEPLOY, RETURN, IDLE [shape=box]
+        ON [shape=none, label=""]    
+    }
+    init -> OFF [label="initiate"]
+    ON -> OFF [label="EvTurnOff"]           
+    OFF -> IDLE [label="EvTurnOn"]
+    IDLE->DEPLOY [label="EvDeploy"]
+    DEPLOY->RETURN [label="EvReturn"]
+}
