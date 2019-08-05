@@ -18,7 +18,11 @@ int main()
     std::cout << "-- Hit key to post Return event" << std::endl;
     std::cin.get();
     machine.process_event(statechart::EvReturn());
-    
+
+    std::cout << "-- Hit key to post TurnOff event" << std::endl;
+    std::cin.get();
+    machine.process_event(statechart::EvTurnOff());
+
     std::cout << "-- Hit key to Exit" << std::endl;
     std::cin.get();
 }

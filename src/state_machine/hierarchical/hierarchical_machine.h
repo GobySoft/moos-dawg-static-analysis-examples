@@ -66,3 +66,5 @@ struct Off : simple_state<Off, Machine>
     using reactions = transition<EvTurnOn, On>;
 };
 } // namespace statechart
+
+
